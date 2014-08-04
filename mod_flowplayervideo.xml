@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>FLOWPLAYER VIDEO</name>
+	<author>I Putu Supradnyana</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2014 www.sofrecom.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>putu.supradnyana@sofrecom.co.id</authorEmail>
+	<authorUrl>www.sofrecom.com</authorUrl>
+	<version>1.2.0</version>
+	<description><![CDATA[
+	This module is designed to display video using flowplayer.
+	]]></description>
+
+	<files>
+		<filename module="mod_flowplayervideo">mod_flowplayervideo.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_flowplayervideo.xml</filename>
+	</files>
+	<media destination="mod_flowplayervideo" folder="media">
+		<filename>index.html</filename>
+		<folder>js</folder>
+		<folder>skins</folder>
+	</media>
+	<config>
+		<fields name="params">
+		<fieldset name="basic">
+			<field 
+				name="videoname" 
+				type="filelist" 
+				default="" 
+				label="Video" 
+				description="Select list of video to be displayed in folder images/videos/" 
+				directory="images/videos/" 
+				filter="\.mp4$" 
+				exclude="" 
+				stripext="" />
+			<field 
+				name="width" 
+				type="text" 
+				default="100" 
+				label="Width (%)" 
+				description="Put the width size in percentage" />
+			<field 
+				name="ratio" 
+				type="text" 
+				default="0.4167" 
+				label="Height ratio" 
+				description="Height ratio compared to width size" />				
+		</fieldset>
+		
+		</fields>		
+	</config>
+</extension>

@@ -1,5 +1,5 @@
 
-This module is to be installed within Joomla.
+This module is to be installed within Joomla to display video using flowplayer.
 Currently support Joomla 3.0 above
 
 Prerequisites:
